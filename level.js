@@ -1,21 +1,14 @@
 import React, {Component} from "react";
-import {Button, Text, View} from "react-native";
-import {Card} from '@ui-kitten/components';
+import {View} from "react-native";
+import CardLevel from "./CardLevel";
 import data from './data/level.json';
-
-const list = data.map((key) => {
-    return (
-        <Card>
-            <Text>{key.description}</Text>
-            <Button title="Click me!"/>
-        </Card>
-    )
-});
 
 export default class Levels extends Component {
     render() {
         return (
-            <View>  {list}  </View>
+            <View>
+                {data.map((v) => (<CardLevel key={v.id} description={v.description} available={v.available}/>))}
+            </View>
         )
     }
 }
