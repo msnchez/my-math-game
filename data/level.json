@@ -1,27 +1,12 @@
-export const levelData = [
+[
     {
-        id: "1",
-        description: "First Level",
-        available: true
+        "id": "1",
+        "description": "First Level",
+        "available": true
     },
     {
-        id: "2",
-        description: "Second Level",
-        available: false
-    },
-    {
-        id: "3",
-        description: "Third Level",
-        available: false
-    },
-    {
-        id: "4",
-        description: "Four Level",
-        available: false
-    },
-    {
-        id: "5",
-        description: "Five Level",
-        available: false
+        "id": "2",
+        "description": "Second Level",
+        "available": false
     }
-];
+]
