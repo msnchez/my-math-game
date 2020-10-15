@@ -1,22 +1,36 @@
 import React from 'react';
-import Levels from './level';
-import Information from "./user/info";
-
+import {View} from 'react-native';
 import * as eva from '@eva-design/eva';
-import {ApplicationProvider, Card, Layout, Text} from '@ui-kitten/components';
+import {ApplicationProvider, IconRegistry, Layout} from '@ui-kitten/components';
+import {EvaIconsPack} from '@ui-kitten/eva-icons';
+
+import Levels from './level';
+import Profile from './Profile'
 
 const HomeScreen = () => (
-    <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text category='h1'>HOME</Text>
-        <Levels/>
+    <Layout>
+        <View style={{flex: 1, alignItems: 'flex-end'}}>
+            <Profile/>
+        </View>
+        <View style={{flex: 2, justifyContent: 'center', alignItems: 'center'}}>
+            <Levels/>
+        </View>
+
     </Layout>
 );
 
 function App() {
     return (
-        <ApplicationProvider {...eva} theme={eva.light}>
-            <HomeScreen/>
-        </ApplicationProvider>
+        <>
+            <IconRegistry icons={EvaIconsPack}/>
+            <ApplicationProvider {...eva} theme={eva.light}>
+
+                <View>
+                    <HomeScreen/>
+                </View>
+
+            </ApplicationProvider>
+        </>
     );
 }
 

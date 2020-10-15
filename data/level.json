@@ -8,5 +8,15 @@
         "id": "2",
         "description": "Second Level",
         "available": false
+    },
+    {
+        "id": "3",
+        "description": "Third Level",
+        "available": false
+    },
+    {
+        "id": "2",
+        "description": "Fourth Level",
+        "available": false
     }
 ]
