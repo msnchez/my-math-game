@@ -1,22 +1,36 @@
 [
-    {
+  {
+    "id": "1",
+    "description": "First Level",
+    "available": true,
+    "missions": [
+      {
         "id": "1",
-        "description": "First Level",
-        "available": true
-    },
-    {
+        "description": "Mission #1"
+      },
+      {
         "id": "2",
-        "description": "Second Level",
-        "available": false
-    },
-    {
+        "description": "Mission #2"
+      },
+      {
         "id": "3",
-        "description": "Third Level",
-        "available": false
-    },
-    {
-        "id": "2",
-        "description": "Fourth Level",
-        "available": false
-    }
+        "description": "Mission #3"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "description": "Second Level",
+    "available": false
+  },
+  {
+    "id": "3",
+    "description": "Third Level",
+    "available": false
+  },
+  {
+    "id": "4",
+    "description": "Fourth Level",
+    "available": false
+  }
 ]
