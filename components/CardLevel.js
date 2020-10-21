@@ -3,12 +3,12 @@ import {StyleSheet, Text, Button} from "react-native";
 
 import {Card, Icon} from "@ui-kitten/components";
 
-function CardLevel({navigation, available, description, key}) {
+function CardLevel({level, handlePress}) {
     return (
-        <Card style={available ? styles.card : [styles.card, styles.disabledCard]}>
+        <Card style={level.available ? styles.card : [styles.card, styles.disabledCard]}>
 
-            {available ? (
-                <Text>{description}</Text>
+            {level.available ? (
+                <Text>{level.description}</Text>
             ) : (
                 <Icon
                     style={styles.icon}
@@ -18,7 +18,7 @@ function CardLevel({navigation, available, description, key}) {
             )
             }
 
-            <Button title="Go to detail" onPress={() => navigation.navigate('Level')}/>
+            <Button title="Go to detail" onPress={() => handlePress(level.id)}/>
 
         </Card>
     );

@@ -4,12 +4,11 @@ import {ApplicationProvider, IconRegistry, Layout} from '@ui-kitten/components';
 import {EvaIconsPack} from '@ui-kitten/eva-icons';
 import {NavigationContainer} from "@react-navigation/native";
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from "./screens/Home";
 import LevelDetail from "./screens/LevelDetail";
-
-const Stack = createStackNavigator();
+import Home from "./screens/Home";
 
 function App() {
+    const Stack = createStackNavigator();
     return (
         <NavigationContainer>
             <IconRegistry icons={EvaIconsPack}/>
