@@ -13,7 +13,11 @@ function App() {
         <NavigationContainer>
             <IconRegistry icons={EvaIconsPack}/>
             <ApplicationProvider {...eva} theme={eva.light}>
-                <Stack.Navigator>
+                <Stack.Navigator
+                  screenOptions={{
+                    headerShown: false
+                  }}
+                >
                     <Stack.Screen name="Home" component={Home}/>
                     <Stack.Screen name="Level" component={LevelDetail}/>
                 </Stack.Navigator>
