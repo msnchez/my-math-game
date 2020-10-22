@@ -6,22 +6,28 @@ import {Card, Icon} from "@ui-kitten/components";
 function CardLevel({level, handlePress}) {
     return (
         <Card style={level.available ? styles.card : [styles.card, styles.disabledCard]}>
-
-            {level.available ? (
-                <Text>{level.description}</Text>
-            ) : (
-                <Icon
-                    style={styles.icon}
-                    fill='#8F9BB3'
-                    name='lock-outline'
-                />
-            )
-            }
-
-            <Button title="Go to detail" onPress={() => handlePress(level.id)}/>
-
+            <Text>{level.description}</Text>
+            <Event id={level.id} status={level.available} handlePress={handlePress}/>
         </Card>
     );
+}
+
+function Event(props) {
+
+    if (props.status) {
+        return (
+            <div>
+                <Button title="Ver" onPress={() => props.handlePress(props.id)}/>
+            </div>
+        )
+    } else {
+        return <Icon
+            style={styles.icon}
+            fill='#8F9BB3'
+            name='lock-outline'
+        />
+
+    }
 }
 
 export default CardLevel;

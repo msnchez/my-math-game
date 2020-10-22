@@ -1,11 +1,12 @@
 import React from 'react';
-import {StyleSheet, Text} from "react-native";
+import {Button, StyleSheet, Text} from "react-native";
 import {Card} from "@ui-kitten/components";
 
-function CardMission({info}) {
+function CardMission({info, handlePress}) {
     return (
-        <Card style={styles.card}>
-            <Text>{info.description}</Text>
+        <Card style={styles.card} >
+            <Text>{info.short_name}</Text>
+            <Button onPress={() => handlePress(info)} title="Jugar"/>
         </Card>
     );
 }
