@@ -10,7 +10,7 @@ const setInitialData = async () => {
       }
     }
 
-    return getData('id');
+    return userId ?? await getData('id');
   } catch (e) {
     throw e;
   }

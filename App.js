@@ -18,7 +18,7 @@ function App() {
     }
 
     setData();
-  }, []); //TODO: improve deps and effect lifecycle.
+  }); //TODO: improve deps and effect lifecycle.
   const Stack = createStackNavigator();
 
   return (
