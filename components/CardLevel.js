@@ -6,7 +6,7 @@ import {Card, Icon} from "@ui-kitten/components";
 function CardLevel({level, handlePress}) {
     return (
         <Card style={level.available ? styles.card : [styles.card, styles.disabledCard]}>
-            <Text>{level.description}</Text>
+            {/*<Text>{level.description}</Text>*/}
             <Event id={level.id} status={level.available} handlePress={handlePress}/>
         </Card>
     );

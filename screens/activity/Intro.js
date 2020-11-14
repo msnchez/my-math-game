@@ -1,15 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { Card, Text, Icon, TopNavigationAction } from '@ui-kitten/components';
 import {Button, View} from "react-native";
-import {Text, Card} from "@ui-kitten/components";
 
-function MissionDetail({route, navigation}) {
-    const {info} = route.params;
-    const [value, setValue] = useState('');
-
+function Intro() {
+    const BackIcon = (props) => (
+        <Icon {...props} name='arrow-back'/>
+    );
     return (
-
         <View style={{flex: 1, justifyContent: 'space-between'}}>
-            <View style={{flex: 0.5, justifyContent: 'center'}}>
+            <View style={{flex: 0.5}}>
                 <Button onPress={() => navigation.goBack()} title="Go back"/>
             </View>
             <View style={{flex: 5}}>
@@ -19,11 +18,11 @@ function MissionDetail({route, navigation}) {
                     </Text>
                 </Card>
             </View>
-            <View style={{flex: 0.5, justifyContent: 'center'}}>
-                <Button title="Iniciar" onPress={() => navigation.navigate('Problem', {info})}/>
+            <View style={{flex: 0.5}}>
+                <Button title="Go back"/>
             </View>
         </View>
-);
+    );
 }
 
-export default MissionDetail;
+export default Intro;
